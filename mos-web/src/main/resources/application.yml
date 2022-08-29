@@ -1,0 +1,14 @@
+mos:
+  database:
+    ip: localhost
+    port: 3306
+    username: root
+    password: root
+
+# notice:mysql version 5.7x !!!
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: ${mos.database.username}
+    password: ${mos.database.password}
+    url: jdbc:mysql://${mos.database.ip}:${mos.database.port}/mos?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
